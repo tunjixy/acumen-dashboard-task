@@ -1,0 +1,34 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --ext .ts,.js,.vue ."
+  },
+  "dependencies": {
+    "@floating-ui/vue": "^1.0.6",
+    "@rushstack/eslint-patch": "^1.7.2",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "chart.js": "^3.9.1",
+    "nuxt": "^3.10.2",
+    "vue": "^3.4.19",
+    "vue-chart-3": "^3.1.8",
+    "vue-datepicker-next": "^1.0.3",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@tailwindcss/forms": "^0.5.7",
+    "@vueuse/core": "^10.7.2",
+    "@vueuse/nuxt": "^10.7.2",
+    "eslint": "^8.56.0",
+    "vite-svg-loader": "^5.1.0"
+  }
+}

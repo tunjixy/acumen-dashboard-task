@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html,
+  body {
+    @apply h-full scroll-smooth;
+  }
+
+  body {
+    @apply antialiased bg-bgColor font-Hanken text-acumen-dark-blue;
+  }
+}
+
+@layer components {
+  .form-input-label {
+    @apply block mb-1 text-sm tracking-tight text-acumen-brown-grey;
+  }
+  .form-input-field {
+    @apply w-full px-3 py-3 text-sm bg-white border rounded-md border-acumen-border-3 ring-offset-acumen-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-acumen-primary focus-visible:ring-offset-0 disabled:cursor-not-allowed disabled:opacity-50 text-acumen-grey-5 placeholder:text-acumen-grey-5;
+  }
+  .form-input-select {
+    @apply block w-full px-4 py-2 text-sm leading-tight rounded appearance-none cursor-pointer bg-acumen-grey-4 form-select disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-acumen-primary focus-visible:ring-offset-0 ring-offset-acumen-primary text-acumen-dark;
+  }
+  .btn-paginate {
+    @apply text-sm font-bold border text-acumen-dark hover:text-acumen-primary disabled:cursor-not-allowed disabled:bg-acumen-grey-8 border-acumen-grey-9 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-acumen-primary focus-visible:ring-offset-0 ring-offset-acumen-primary size-[32px] rounded flex items-center justify-center transition-colors duration-300 ease-in;
+  }
+  .table-wrapper {
+    @apply block w-full overflow-x-auto rounded-t-lg;
+  }
+  .table {
+    @apply w-full border-collapse;
+  }
+  .table-head {
+    @apply px-6 py-5 text-xs tracking-wide text-left uppercase bg-white border-b border-l-0 border-r-0 border-acumen-grey-6 whitespace-nowrap;
+  }
+  .table-row {
+    @apply bg-white border-b border-acumen-grey-6;
+  }
+  .table-item {
+    @apply px-6 py-5 text-sm align-middle whitespace-nowrap;
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s ease-in;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.slide-nav-enter-active,
+.slide-nav-leave-active {
+  transition: all 0.2s ease-out;
+}
+.slide-nav-enter-from,
+.slide-nav-leave-to {
+  transform: translateX(-100%);
+}
+
+.slide-over-enter-active,
+.slide-over-leave-active {
+  transition: all 0.3s ease-out;
+}
+.slide-over-enter-from,
+.slide-over-leave-to {
+  transform: translateX(100%);
+}
+
+.dropdown-fade-enter-active,
+.dropdown-fade-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+.dropdown-fade-enter-from,
+.dropdown-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-12px);
+}
+
+/* Active route styling */
+.router-link-exact-active {
+  @apply text-acumen-orange;
+}
+.router-link-exact-active svg {
+  @apply text-acumen-orange;
+}
+
+/* vue-date-picker-next styling override */
+.mx-datepicker {
+  width: 100% !important;
+  display: block !important;
+}
+.mx-datepicker-main,
+.mx-date-time,
+.mx-time {
+  @apply bg-white border-none rounded-md !important;
+}
+.mx-icon-calendar,
+.mx-icon-clear,
+i {
+  @apply text-acumen-brown-grey !important;
+}
+.mx-calendar-content .cell.active {
+  @apply bg-acumen-primary text-white !important;
+}
+.mx-table-date .today {
+  @apply font-bold text-acumen-primary !important;
+}
+.mx-calendar-content .cell:hover {
+  @apply bg-acumen-primary text-white !important;
+}
+.mx-time-content .mx-time-item:hover {
+  @apply bg-acumen-primary text-acumen-primary/10 !important;
+}
+.mx-time-content .mx-time-item.active {
+  @apply text-acumen-primary !important;
+}

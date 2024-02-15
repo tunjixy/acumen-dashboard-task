@@ -1,0 +1,45 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+    './app.vue',
+    './error.vue',
+  ],
+  theme: {
+    fontFamily: {
+      Hanken: ['Hanken Grotesk', 'sans-serif'],
+    },
+    extend: {
+      colors: {
+        bgColor: '#f3f7ff',
+        'acumen-primary': '#4568d1',
+        'acumen-dark-blue': '#021c3e',
+        'acumen-green': '#15ae73',
+        'acumen-brown-grey': '#51545c',
+        'acumen-brown-grey-2': '#8e8f93',
+        'acumen-brown-grey-3': '#5a483c',
+        'acumen-blue-grey': '#566ba0',
+        'acumen-red': '#d53120',
+        'acumen-orange': '#ea8d51',
+        'acumen-grey': '#9999bc',
+        'acumen-grey-2': '#eceef5',
+        'acumen-grey-3': '#f5f7fc',
+        'acumen-grey-4': '#f8f8f8',
+        'acumen-grey-5': '#8D9091',
+        'acumen-grey-6': '#e6e6e6',
+        'acumen-grey-7': '#eff1f6',
+        'acumen-grey-8': '#c8ced5',
+        'acumen-grey-9': '#dfe3e8',
+        'acumen-dark': '#131316',
+        'acumen-border': '#e3e9f4',
+        'acumen-border-2': '#e7e9ff',
+        'acumen-border-3': '#C1CEC8',
+      },
+    },
+  },
+  plugins: [require('@tailwindcss/forms')],
+}
